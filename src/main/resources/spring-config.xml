@@ -10,36 +10,9 @@
 
 
     </bean>
-    <bean name="tea" class="main.java.Tea"/>
+    <bean name="hotDrink" class="main.java.Tea"/>
     <bean name="expressTea" class="main.java.ExpressTea"/>
-    <bean name="teaRestaurant" class="main.java.Restaurant">
-        <property name="hotDrink" ref="tea"></property>
-    </bean>
-    <bean name="expressTeaRestaurant" class="main.java.Restaurant">
-        <property name="hotDrink">
-            <bean name="expressTea1" class="main.java.ExpressTea"></bean>
-        </property>
-    </bean>
-    <bean name="complex" class="main.java.Complex">
-        <property name="list">
-            <list>
-                <ref bean="expressTea"></ref>
-                <ref bean="tea"></ref>
-            </list>
-        </property>
-        <property name="map">
-            <map>
-                <entry key="1" value="tulsi"/>
-                <entry key="2" value="Neem"/>
-            </map>
-        </property>
-        <property name="set">
-            <set>
-                <value>1</value>
-                <value>2</value>
-                <value>3</value>
-            </set>
-        </property>
 
-    </bean>
+    <bean name="restaurant" class="main.java.Restaurant" autowire="byName"></bean>
+
 </beans>
