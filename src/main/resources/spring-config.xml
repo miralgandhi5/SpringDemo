@@ -10,9 +10,9 @@
 
 
     </bean>
-    <bean name="hotDrink" class="main.java.Tea"/>
+    <!--<bean name="hotDrink" class="main.java.Tea"/>-->
     <bean name="expressTea" class="main.java.ExpressTea"/>
 
-    <bean name="restaurant" class="main.java.Restaurant" autowire="byName"></bean>
+    <bean name="restaurant" class="main.java.Restaurant" autowire="byType"></bean>
 
 </beans>
