@@ -13,6 +13,6 @@
     <bean name="hotDrink" class="main.java.Tea"/>
     <bean name="expressTea" class="main.java.ExpressTea"/>
 
-    <bean name="restaurant" class="main.java.Restaurant" autowire="constructor"></bean>
+    <bean name="restaurant" class="main.java.Restaurant" autowire="constructor" scope="prototype"></bean>
 
 </beans>

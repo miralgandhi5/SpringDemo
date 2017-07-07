@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("main/resources/spring-config.xml");
 
-         Restaurant restaurant=(Restaurant)applicationContext.getBean("restaurant");
-         restaurant.getHotDrink().prepareHotDrink();
+        System.out.println(applicationContext.isPrototype("restaurant"));
+
 
 
     }
